@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`, 
+})
+
 module.exports = {
   siteMetadata: {
     title: `simple-auth`,
@@ -17,5 +21,10 @@ module.exports = {
       "path": "./src/pages/"
     },
     __key: "pages"
-  }]
+  },{
+    resolve: `gatsby-plugin-styled-components`,
+    options: {
+      // Add any options here
+    },
+  },]
 };
